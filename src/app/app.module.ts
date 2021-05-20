@@ -8,10 +8,13 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AuthGuardService } from './auth/auth.guard.service';
+import { NavbarComponent } from './navbar/navbar.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
@@ -19,7 +22,8 @@ import { AuthGuardService } from './auth/auth.guard.service';
     AuthenticationModule,
     ProductsModule,
     AdminModule,
-    SupperAdminModule
+    SupperAdminModule,
+    FontAwesomeModule
   ],
   providers: [AuthGuardService],
   bootstrap: [AppComponent]
